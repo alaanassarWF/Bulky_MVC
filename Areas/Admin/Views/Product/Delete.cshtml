@@ -1,0 +1,61 @@
+﻿@model Product
+
+<div class="container my-4">
+    <div class="card shadow-lg border-0 rounded-lg">
+        <div class="card-header bg-danger bg-gradient text-white p-3 rounded-top">
+            <div class="row">
+                <div class="col-12 text-center">
+                    <h2 class="font-weight-bold">Delete Product</h2>
+                </div>
+            </div>
+        </div>
+        <div class="card-body p-4">
+            <form method="post">
+                <div class="form-group mb-3">
+                    <label asp-for="Title" class="col-form-label font-weight-bold">Product Name</label>
+                    <input asp-for="Title" type="text" class="form-control rounded-pill" placeholder="Product name" readonly />
+                </div>
+                <div class="form-group mb-3">
+                    <label asp-for="Description" class="col-form-label font-weight-bold">Description</label>
+                    <textarea asp-for="Description" class="form-control rounded-pill" placeholder="Description" readonly></textarea>
+                </div>
+                <div class="form-group mb-3">
+                    <label asp-for="ISBN" class="col-form-label font-weight-bold">ISBN</label>
+                    <input asp-for="ISBN" type="text" class="form-control rounded-pill" placeholder="ISBN" readonly />
+                </div>
+                <div class="form-group mb-3">
+                    <label asp-for="Author" class="col-form-label font-weight-bold">Author</label>
+                    <input asp-for="Author" type="text" class="form-control rounded-pill" placeholder="Author" readonly />
+                </div>
+                <div class="form-group mb-3">
+                    <label asp-for="ListPrice" class="col-form-label font-weight-bold">List Price</label>
+                    <input asp-for="ListPrice" type="number" class="form-control rounded-pill" placeholder="List Price" readonly />
+                </div>
+                <div class="form-group mb-3">
+                    <label asp-for="Price" class="col-form-label font-weight-bold">Price</label>
+                    <input asp-for="Price" type="number" class="form-control rounded-pill" placeholder="Price" readonly />
+                </div>
+                <div class="form-group mb-3">
+                    <label asp-for="Price50" class="col-form-label font-weight-bold">Price for 50</label>
+                    <input asp-for="Price50" type="number" class="form-control rounded-pill" placeholder="Price for 50" readonly />
+                </div>
+                <div class="form-group mb-3">
+                    <label asp-for="Price100" class="col-form-label font-weight-bold">Price for 100</label>
+                    <input asp-for="Price100" type="number" class="form-control rounded-pill" placeholder="Price for 100" readonly />
+                </div>
+
+                <div class="d-flex justify-content-between">
+                    <button type="submit" class="btn btn-danger rounded-pill px-4">Delete</button>
+                    <a asp-controller="Product" asp-action="Index" class="btn btn-outline-primary rounded-pill px-4">Back to List</a>
+                </div>
+            </form>
+        </div>
+        <div class="card-footer text-center bg-light border-0 rounded-bottom">
+            <small class="text-muted">Manage your products easily</small>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+}
